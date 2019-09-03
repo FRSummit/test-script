@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Test Read</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container text-center my-4">
+            <p class="font-weight-bold">The data in the table comes from the google spreadsheet</p>
+            <a class="btn btn-primary mb-4" href="https://docs.google.com/spreadsheets/d/1g6XQd0d_uzFzidVvqM8wjxarsxzKk353MVtuzr62Syg/edit?usp=sharing" role="button" target="_blank">Click to see the source sheet</a>
+            <table class="table table bordered table-striped" id="testTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+                <tbody id="demo">
+                </tbody>
+            </table>
+        </div>
+        
+        
+        <script>
+            $(document).ready(function(){
+                $.getJSON("https://spreadsheets.google.com/feeds/list/1g6XQd0d_uzFzidVvqM8wjxarsxzKk353MVtuzr62Syg/1/public/values?alt=json", function (data) {
+  console.log(data.feed.entry[0]);
+                    var sheetData = data.feed.entry;
+                    var i;
+                    for (i = 0; i < sheetData.length; i++) {
+                        var firstname = data.feed.entry[i]['gsx$firstname']['$t'];
+                        var lastname = data.feed.entry[i]['gsx$lastname']['$t'];
+                        document.getElementById('demo').innerHTML += ('<tr>'+'<td>'+firstname+'</td>'+'<td>'+lastname+'</td>'+'</tr>');
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+
+            table, th, td {
+                margin:10px 0;
+                border:solid 1px #333;
+                padding:2px 4px;
+                font:15px Verdana;
+            }
+            th {
+                font-weight:bold;
+            }
+            #loader {
+                border: 16px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 16px solid blue;
+                border-bottom: 16px solid blue;
+                width: 60px;
+                height: 60px;
+                -webkit-animation: spin 2s linear infinite;
+                animation: spin 2s linear infinite;
+                visibility:hidden;
+            }
+            @-webkit-keyframes spin {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                }
+                100% {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            form {
+                width: 100%;
+                margin: 0;
+				background: #c9e2e1a8;
+				border-radius: 6px;
+				border: 2px solid #bbc7c7a6;
+				padding: 4px;
+            }
+            .btn-sec {
+                margin-top: 2%;
+            }
+            .btn-sec-btn {
+                padding: 6px 10px;
+                font-size: 16px;
+                font-weight: bold;
+                border-radius: 5px;
+                margin: 10px;
+            }
+			.in-section {
+				width: 24%;
+				display: inline-block;
+			}
+			.label-section, .input-section{
+				text-align: left;
+				margin: 5px;
+			}
+			.label-section label{
+				font-size: 16px;
+				font-weight: bold;
+			}
+			.input-section input{
+				text-align: left;
+				padding: 2px;
+				font-size: 16px;
+				border-radius: 4px;
+				border: 2px solid #4a4a4aa1;
+				width: 100%;
+			}
+			.submit-section {
+				margin-top: 2%;
+			}
+			.submit-section input {
+				font-size: 16px;
+				padding: 6px 40px;
+				font-weight: bold;
+				background: aliceblue;
+				border-radius: 4px;
+				border: 2px solid #4a4a4aa1;
+			}
+			@media screen and (max-width: 650px) {
+				form {
+					width: 60%;
+				}
+				.in-section {
+					display: block;
+					width: 100%;
+				}
+			}
+			@media screen and (max-width: 481px) {
+				form {
+					width: 100%;
+				}
+			}
+			.detail-section {
+				width: 100%;
+				margin-top: 3%;
+				background: #c9e2e1a8;
+				border-radius: 6px;
+				border: 2px solid #bbc7c7a6;
+				padding: 4px;
+			}

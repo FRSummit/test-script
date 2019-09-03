@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+	  <link rel="stylesheet" href="style.css">
+	  <link rel="stylesheet" href="style2.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="connection.js"></script>
+	</head>
+
+	<body>
+		<div align="center">
+			<h1>Prestamo de equipos UCTA</h1>
+			<form>
+                <div class="in-section">
+					<div class="label-section">
+						<label>Vehicle Number</label>
+					</div>
+					<div class="input-section">
+						<input class="vno" type="text" placeholder="Enter vehicle no" name="vehicleNo" id="vehicleNo"/>
+					</div>
+				</div>
+                <div class="in-section">
+					<div class="label-section">
+						<label>Income</label>
+					</div>
+					<div class="input-section">
+						<input type="text" placeholder="Enter income" name="income" id="income"/>
+					</div>
+				</div>
+                <div class="in-section">
+					<div class="label-section">
+						<label>Remark</label>
+					</div>
+					<div class="input-section">
+						<input type="text" placeholder="Enter remarks" name="remark" id="remark"/>
+					</div>
+				</div>
+                <div class="in-section">
+					<div class="label-section">
+						<label>Expendature</label>
+					</div>
+					<div class="input-section">
+						<input type="text" placeholder="Enter expendature" name="expendature" id="expendature"/>
+					</div>
+				</div>
+				<div class="submit-section">
+					<!--<button class="submit-data" type="submit" onClick="insert_value()">Save</button>-->
+					<input class="submit-data" type="button" onClick="insert_value()" value="Save"/>
+					<!--<input class="submit-data" type = "submit"  id = "b1" onClick="insert_value()" value = "Insert"/>-->
+				</div>
+				<!--
+				Vehicle Number
+				<input type="text" name="Code" id="code"/>
+				<br>
+				Income
+				<input list="Carreras" name="Carrera" id="carrera"/>
+				<br>
+				Remark
+				<input list="Equipos" name="E-1" id="e1" type="text"/>
+				<br>
+				Expendature
+				<input list="Equipos" name="E-2" id="e2"/>
+				-->
+				<!--<br>
+				E-3
+				<input list="Equipos" name="E-3" id="e3"/>
+				<br>
+				E-4
+				<input list="Equipos" name="E-4" id="e4"/>
+				<datalist id="Equipos" name"Prestamo">
+					<option value="HDMI"></option>
+					<option value="VGA"></option>
+					<option value="LAPTOP"></option>
+					<option value="PROYECTOR"></option>
+					<option value="EXTENCION"></option>
+				</datalist>
+				<br>
+				AULA
+				<input list="Espacios" name="E-4" id="aula"/>-->
+			</form>
+
+			<div id="loader"></div>
+
+			<p id="re"></p>
+
+			<input type="button" onClick="insert_value()" value="Insert"></input>
+			<input type="button" onclick="read_value()" value="Read" />
+			<!--
+			<input type="button" onclick="update_value()" value="Update" />
+			<input type="button" onclick="delete_value()" value="Delete" />
+			<br>
+			<a href="https://docs.google.com/spreadsheets/d/1UUBGKGvm4b9LOhqbdh0UDG6vYz9Phr1DqGyg8DvCiUc/edit?usp=sharing" target="_blank">Ir a la Hoja en Drive</a>
+			<br>
+			<a href="https://script.google.com/d/15dk-xpcCU0WYkRv9BExnRRmPjFcl6MvIPhEozoHZ6mHZ_MPfIjYKfzZj/edit?usp=sharing" target="_blank">Ir al Codigo Apps Script</a>
+			-->
+			<div id="showData"></div>
+		</div>
+	</body>
+<html>

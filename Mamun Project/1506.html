@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="1506.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="1506.js"></script>
+	</head>
+
+	<body>
+		<div class="content">
+			<div class="car-select">
+				<div class="car-input-section">
+					<select name="rl" class="vno" name="vehicleNo" id="vehicleNo">
+                        <option>Select one</option>
+                        <option>1506</option>
+                        <option>8489</option>
+                        <option>3043</option>
+                        <option>3044</option>
+                        <option>3173</option>
+                        <option>9022</option>
+                    </select>	
+				</div>
+				<div class="car-select-btn-section">
+					<div class="car-select-btn" role="button" onclick="read_value()">Load Data</div>
+				</div>
+			</div>
+			<div class="show-data-section">
+				<div class="text-sec">Select the car which you want to load...</div>
+				<div id="show-data"></div>
+			</div>
+		</div>
+	</body>
+</html>

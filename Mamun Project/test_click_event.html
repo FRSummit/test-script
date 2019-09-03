@@ -1,0 +1,149 @@
+<DOCTYPE html>
+<html>
+    <head>
+	<link rel="stylesheet" href="test_click_event.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="test_click_event.js"></script>
+    </head>
+    <body>
+        <div align="center">
+            <div>
+                <p style="font-size: 30px; font-weight: bold; margin-bottom: 3%;">Demo Car Project</p>
+            </div>
+            <form >
+				<div class="alert-msg">No car select</div>
+                <div class="in-section">
+					<div class="label-section">
+						<label>Vehicle Number</label>
+					</div>
+					<div class="input-section">
+						<select name="rl" class="vno" name="vehicleNo" id="vehicleNo">
+                            <option>Select one</option>
+                            <option>1506</option>
+                            <option>8489</option>
+                            <option>3043</option>
+                            <option>3044</option>
+                            <option>3173</option>
+                            <option>9022</option>
+                        </select>	
+					</div>
+				</div>
+                <div class="in-section">
+					<div class="label-section">
+						<label>Income</label>
+					</div>
+					<div class="input-section">
+						<input type="number" placeholder="Enter income" name="income" id="income"/>
+					</div>
+				</div>
+                <div class="in-section">
+					<div class="label-section">
+						<label>Remark</label>
+					</div>
+					<div class="input-section">
+						<input type="text" placeholder="Enter remarks" name="remark" id="remark"/>
+					</div>
+				</div>
+                <div class="in-section">
+					<div class="label-section">
+						<label>Expendature</label>
+					</div>
+					<div class="input-section">
+						<input type="number" placeholder="Enter expendature" name="expendature" id="expendature"/>
+					</div>
+				</div>
+				<div class="submit-section">
+					<a class="submit-data" type="submit">Add</a>
+				</div>
+            </form>
+			
+			<!--
+            <p id="re"></p>
+            <div id="showData1">
+				<span class="show-v-no"></span>
+				<span class="show-income"></span>
+				<span class="show-remark"></span>
+				<span class="show-cost"></span>
+			</div>
+            <div id="showData2"></div>
+            <div id="showData3"></div>
+            <div id="showData4"></div>
+			-->
+			
+			<div class="detail-section">
+				<div>
+					<p style="font-size: 30px; font-weight: bold; margin: 0;">Details</p>
+				</div>
+                <div class="dtl-in-section-vno">
+					<div class="label-section">
+						<label>Vehicle Number</label>
+					</div>
+					<div class="dtl-input-section-vno">
+						<input style="margin-top:0;" class="vno-dtl" type="number" placeholder="Vehicle 1" name="vehicleNo1" id="vehicleNo1"/>
+						<input style="margin-top:4%;" class="vno-dtl" type="number" placeholder="Vehicle 2" name="vehicleNo2" id="vehicleNo2"/>
+						<input style="margin-top:4%;" class="vno-dtl" type="number" placeholder="Vehicle 3" name="vehicleNo3" id="vehicleNo3"/>
+						<input style="margin-top:4%;" class="vno-dtl" type="number" placeholder="Vehicle 4" name="vehicleNo4" id="vehicleNo4"/>
+						<input style="margin-top:4%;" class="vno-dtl" type="number" placeholder="Vehicle 5" name="vehicleNo5" id="vehicleNo5"/>
+						<input style="margin-top:4%;" class="vno-dtl" type="number" placeholder="Vehicle 6" name="vehicleNo6" id="vehicleNo6"/>
+					</div>
+				</div>
+                <div class="dtl-in-section-income">
+					<div class="label-section">
+						<label>Income</label>
+					</div>
+					<div class="dtl-input-section-income">
+						<input style="margin-top:0;" class="income-dtl" type="number" placeholder="Vehicle 1 income" name="income1" id="income1" value=0 />
+						<input style="margin-top:4%;" class="income-dtl" type="number" placeholder="Vehicle 2 income" name="income2" id="income2" value=0 />
+						<input style="margin-top:4%;" class="income-dtl" type="number" placeholder="Vehicle 3 income" name="income3" id="income3" value=0 />
+						<input style="margin-top:4%;" class="income-dtl" type="number" placeholder="Vehicle 4 income" name="income4" id="income4" value=0 />
+						<input style="margin-top:4%;" class="income-dtl" type="number" placeholder="Vehicle 5 income" name="income5" id="income5" value=0 />
+						<input style="margin-top:4%;" class="income-dtl" type="number" placeholder="Vehicle 6 income" name="income6" id="income6" value=0 />
+					</div>
+				</div>
+                <div class="dtl-in-section-remark">
+					<div class="label-section">
+						<label>Remark</label>
+					</div>
+					<div class="dtl-input-section-remark">
+						<input style="margin-top:0;" class="remark-dtl" type="text" placeholder="Vehicle 1 remarks" name="remark1" id="remark1"/>
+						<input style="margin-top:4%;" class="remark-dtl" type="text" placeholder="Vehicle 2 remarks" name="remark2" id="remark2"/>
+						<input style="margin-top:4%;" class="remark-dtl" type="text" placeholder="Vehicle 3 remarks" name="remark3" id="remark3"/>
+						<input style="margin-top:4%;" class="remark-dtl" type="text" placeholder="Vehicle 4 remarks" name="remark4" id="remark4"/>
+						<input style="margin-top:4%;" class="remark-dtl" type="text" placeholder="Vehicle 5 remarks" name="remark5" id="remark5"/>
+						<input style="margin-top:4%;" class="remark-dtl" type="text" placeholder="Vehicle 6 remarks" name="remark6" id="remark6"/>
+					</div>
+				</div>
+                <div class="dtl-in-section-expendature">
+					<div class="label-section">
+						<label>Expendature</label>
+					</div>
+					<div class="dtl-input-section-expendature">
+						<input style="margin-top:0;" class="expendature-dtl" type="number" placeholder="Vehicle 1 expendature" name="expendature1" id="expendature1" value=0 />
+						<input style="margin-top:4%;" class="expendature-dtl" type="number" placeholder="Vehicle 2 expendature" name="expendature2" id="expendature2" value=0 />
+						<input style="margin-top:4%;" class="expendature-dtl" type="number" placeholder="Vehicle 3 expendature" name="expendature3" id="expendature3" value=0 />
+						<input style="margin-top:4%;" class="expendature-dtl" type="number" placeholder="Vehicle 4 expendature" name="expendature4" id="expendature4" value=0 />
+						<input style="margin-top:4%;" class="expendature-dtl" type="number" placeholder="Vehicle 5 expendature" name="expendature5" id="expendature5" value=0 />
+						<input style="margin-top:4%;" class="expendature-dtl" type="number" placeholder="Vehicle 6 expendature" name="expendature6" id="expendature6" value=0 />
+					</div>
+				</div>
+				<div class="total-section">
+					<div style="display: inline-block; width: 33%;">
+						<label style="font-size: 16px; font-weight: bold;">Total Income</label>
+						<input style="" class="total-income-dtl" type="number" placeholder="Total income" name="totalIncome" id="totalIncome" value=0 />
+					</div>
+					<div style="display: inline-block; width: 33%;">
+						<label style="font-size: 16px; font-weight: bold;">Total Expendature</label>
+						<input style="" class="total-cost" type="number" placeholder="Total cost" name="totalCost" id="totalCost" value=0 />
+					</div>
+					<div style="display: inline-block; width: 33%;">
+						<label style="font-size: 16px; font-weight: bold;">Net Income</label>
+						<input style="" class="net-income" type="number" placeholder="Net income" name="netIncome" id="netIncome" value=0 />
+					</div>
+				</div>
+				<div class="submit-section">
+					<button class="submit-all-data" type="submit" onClick="insert_all_value()" disabled>Save All Data</button>
+				</div>
+			</div>
+        </div>
+    </body>
+<html>

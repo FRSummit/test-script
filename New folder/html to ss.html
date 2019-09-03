@@ -1,0 +1,65 @@
+<!Doctype html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+        </script>
+        <script>
+        function postContactToGoogle() {
+            var fullname=$('#fullname').val();
+            var lastname=$('#lastname').val();
+            $.ajax({
+                url:"https://docs.google.com/forms/d/e/1FAIpQLScW8xx_8j60KP2cSDHumesH0dErk8le138Xhz3dXo8K8UXIeA/formResponse",
+                data:{
+                    "entry_1369291972":fullname,
+                    "entry_198441912":lastname
+                },
+                type:"POST",dataType:"xml",statusCode: {
+                    0:function() {
+                        window.location.replace("thankyou.html");
+                    },200:function(){
+                        window.location.replace("thankyou.html");
+                    }
+                }
+            });
+        }
+        </script>
+        <style>
+            .FormRequest {
+                background: lightyellow;
+                width:400px;
+                height:250px;
+                border:1px solid blue;
+                border-radius:10px 10px 10px 10px;
+            }
+            .FormRequest #formRequest{
+                margin-left:20px;
+                font-family:consolas;
+                color: blue;
+            }
+            .FormRequest #formRequest input[type="button"],input[type="reset"]{
+                border:1px solid green;
+                background: darkred;
+                color:white;
+                border-radius:3px 3px 3px 3px;
+            }
+        </style>
+    </head>
+    <body bgcolor="silver">
+        <table  class="FormRequest" align="center">
+            <tr><td>
+            <form id="formRequest">
+                FULL NAME:<br/>
+                <input type="text" name="fullname" id="fullname" placeholder="Full Name" /><br/>
+
+                MOBILE NUMBER:<br/>
+                <input type="text" name="lastname" id="lastname" maxlength="10" placeholder="Last Name" /><br/>
+
+                <center>
+                    <input type="button" name="Submit" id="Submit" onclick="postContactToGoogle()" value="Submit"/>
+                    <input type="reset" value="Reset"/>
+                </center>
+            </form>
+            </td></tr>
+        </table>
+    </body>
+</html>

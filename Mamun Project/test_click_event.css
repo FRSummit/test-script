@@ -1,0 +1,155 @@
+table, th, td {
+                margin:10px 0;
+                border:solid 1px #333;
+                padding:2px 4px;
+                font:15px Verdana;
+            }
+            th {
+                font-weight:bold;
+            }
+            #loader {
+                border: 16px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 16px solid blue;
+                border-bottom: 16px solid blue;
+                width: 60px;
+                height: 60px;
+                -webkit-animation: spin 2s linear infinite;
+                animation: spin 2s linear infinite;
+                visibility:hidden;
+            }
+            @-webkit-keyframes spin {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                }
+                100% {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            form {
+                width: 100%;
+                margin: 0;
+				background: #c9e2e1a8;
+				border-radius: 6px;
+				border: 2px solid #bbc7c7a6;
+				padding: 4px;
+            }
+            .btn-sec {
+                margin-top: 2%;
+            }
+            .btn-sec-btn {
+                padding: 6px 10px;
+                font-size: 16px;
+                font-weight: bold;
+                border-radius: 5px;
+                margin: 10px;
+            }
+			.in-section, 
+			.dtl-in-section-vno, 
+			.dtl-in-section-income, 
+			.dtl-in-section-remark, 
+			.dtl-in-section-expendature  {
+				width: 24%;
+				display: inline-block;
+			}
+			.label-section, 
+			.input-section, 
+			.dtl-input-section-vno, 
+			.dtl-input-section-income, 
+			.dtl-input-section-remark, 
+			.dtl-input-section-expendature{
+				text-align: left;
+				margin: 5px;
+			}
+			.label-section label, 
+			.input-section label{
+				font-size: 16px;
+				font-weight: bold;
+			}
+			.input-section input, 
+			.input-section select, 
+			.dtl-input-section-vno input, 
+			.dtl-input-section-income input, 
+			.dtl-input-section-remark input, 
+			.dtl-input-section-expendature input{
+				text-align: left;
+				padding: 2px;
+				font-size: 16px;
+				border-radius: 4px;
+				border: 2px solid #4a4a4aa1;
+				width: 100%;
+			}
+			.input-section select {
+				font-size: 14px;
+			}
+			.submit-section {
+				margin: 2% 0;
+			}
+			.submit-section a, 
+			.submit-section button {
+				font-size: 16px;
+				padding: 6px 40px;
+				font-weight: bold;
+				background: aliceblue;
+				border-radius: 4px;
+				border: 2px solid #4a4a4aa1;
+				cursor: pointer;
+			}
+			@media screen and (max-width: 650px) {
+				form {
+					width: 60%;
+				}
+				.in-section {
+					display: block;
+					width: 100%;
+				}
+				form .submit-section {
+					margin: 4% 0;
+				}
+			}
+			@media screen and (max-width: 481px) {
+				form {
+					width: 100%;
+				}
+				.total-section div {
+					display: block !important;
+				}
+			}
+			.detail-section {
+				width: 100%;
+				margin-top: 3%;
+				background: #c9e2e1a8;
+				border-radius: 6px;
+				border: 2px solid #bbc7c7a6;
+				padding: 4px;
+			}
+			.alert-msg {
+				font-size: 16px;
+				color: #ff0202;
+				display: none;
+			}
+			#vehicleNo1, #income1, #remark1, #expendature1,
+			#vehicleNo2, #income2, #remark2, #expendature2,
+			#vehicleNo3, #income3, #remark3, #expendature3,
+			#vehicleNo4, #income4, #remark4, #expendature4,
+			#vehicleNo5, #income5, #remark5, #expendature5,
+			#vehicleNo6, #income6, #remark6, #expendature6 {
+				display: none;
+			}
+			.total-section {
+				margin-top: 4%;
+				text-align: left;
+				padding: 0 16px;
+			}
+			.total-section input{
+				text-align: left;
+				padding: 2px;
+				font-size: 16px;
+				border-radius: 4px;
+				border: 2px solid #4a4a4aa1;
+				width: 80%;
+			}
